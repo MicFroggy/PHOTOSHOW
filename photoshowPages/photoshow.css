@@ -1,0 +1,561 @@
+/* 1. Глобальные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body {
+  font-family: Arial, sans-serif;
+  color: #03050f;
+  background-color: #d5dae0;
+  line-height: 1.5;
+}*/
+
+/* 2. Навигация */
+
+/* Стили для xml и logo(svg) */
+.logo-svg {
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+  width: 6rem;    
+  height: auto;
+  z-index: 1001;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /*height: 6%;*/
+  background-color: #000;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #020a0e;
+  /*width: 15vw;
+  height: 9.5rem;*/
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #e8ecec;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: slideDown 0.5s;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* 3. Основной экран (Main) */
+.main {
+  position: relative;
+  height: 100vh;
+  background: url('pic1.png') no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.main-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.main-content {
+  position: relative;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.main-content p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/*   4. Описание */
+.description-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  position: relative;
+  padding: 20px;
+}
+
+.description-section::before {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: url('rocket.png') no-repeat center/contain;
+  opacity: 0.1;
+}
+
+.description-title {
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+.description-text {
+  font-size: 30px;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/*  5. Преимущества */
+.advantages {
+  background: #d5dae0;
+  color: #000;
+  text-align: center;
+  padding: 150px 20px 100px;
+}
+
+.advantages .advh2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.adv {
+  font-size: 30px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.advantage-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+.advantage-item img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.advantage-item .ah3 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.advantage-item p {
+  font-size: 20px;
+}
+
+/* 6. Навыки */
+.skills {
+  width: 100%;
+  text-align: left;
+  padding: 20vh 15vw 30vh;
+}
+
+.skills .sh2 {
+  text-align: center;
+  margin-bottom: 75px;
+  font-size: 55px;
+  color: #01090c;
+}
+
+.skill {
+  margin-bottom: 20px;
+  padding: 0 100px;
+}
+
+.skill-name {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #01090c;
+}
+
+.skill-bar {
+  height: 5px;
+  background-color: #03050f;
+  border-radius: 2.5px;
+}
+
+/* 7. Портфолио / Работы */
+.works{
+  background-color: white;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+.wh2 {
+  text-align: center;
+  font-size: 5vh;
+  padding-bottom: 3vh;
+}
+.gallery {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 2fr 1fr;
+  gap: 5px;                  /* Равномерный отступ между всеми элементами */
+  max-width: 1200px;         /* Максимальная ширина галереи */
+  margin: 0 auto;            /* Центрирование контейнера */
+  padding: 0 20px;           /* Отступы от краёв экрана */
+}
+
+/* Крупное фото (занимает две строки, первая колонка) */
+.large-photo {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Вертикальные фото */
+.vertical-photo {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Маленькое фото */
+.small-photo {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Самое маленькое фото */
+.smallest-photo {
+  grid-row: 3;
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.but1{
+  text-align: center;
+  margin-top: 3vh;
+}
+
+/* Адаптивность: на мобильных устройствах галерея в одну колонку */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 0 10px;
+  }
+  .large-photo {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}
+
+
+/*  8. Услуги */
+.services {
+  text-align: center;
+  padding: 40px 20px 20px;
+  margin: 20px;
+}
+
+.services .ush1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.services .pu {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* Контейнер для услуг */
+.services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Элемент услуги: изображение слева, текст справа */
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 5vh;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.service-image {
+  flex: 0 0 40%;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.service-details {
+  flex: 1;
+  text-align: left;
+}
+
+.service-details h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #01090c;
+}
+
+.service-details .t1 {
+  font-size: 20px;
+  margin-bottom: 1vh;
+  text-align: left;
+  padding: 0 20px;
+}
+
+/* Кнопка "Подробнее" */
+.b1 {
+  border: 1px solid transparent;
+  padding: 10px 50px;
+  background-color: #01050c;
+  color: #e8eeee;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+}
+
+.b1:hover {
+  background-color: #e4dcdc;
+  color: #000;
+  border: 1px solid #000;
+  transition: all 375ms ease;
+  
+}
+
+/* 9. Контакты */
+.contact {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 20vh ;
+}
+
+.contact .end {
+  font-size: 28px;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 3vh 5vw;
+  margin-bottom: 15vh;
+}
+
+.foottt{
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 3vh 2vw;
+  font-size: 1rem;
+}
+
+/* 10. Адаптивные стили */
+/* Для устройств с максимальной шириной 1024px */
+@media (max-width: 1024px) {
+  .navbar ul {
+    gap: 15px;
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .description-title {
+    font-size: 40px;
+  }
+  
+  .description-text {
+    font-size: 24px;
+  }
+  
+  .advantages .advh2 {
+    font-size: 32px;
+  }
+  
+  .adv {
+    font-size: 26px;
+    padding: 0 20px;
+  }
+  
+  .skills .sh2 {
+    font-size: 45px;
+  }
+  
+  .skill-name {
+    font-size: 22px;
+  }
+  
+  .service-details h2 {
+    font-size: 1.8em;
+  }
+  
+  .service-details .t1 {
+    font-size: 18px;
+  }
+}
+
+/* Для мобильных устройств с максимальной шириной 768px */
+@media (max-width: 768px) {
+  /* Навигация */
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Основной экран */
+  .main {
+    margin-top: 5rem;
+    height: 80vh;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+  }
+  
+  .main-content p {
+    font-size: 1rem;
+  }
+  
+  /* Описание */
+  .description-section {
+    height: auto;
+    padding: 60px 20px;
+  }
+  
+  .description-title {
+    font-size: 32px;
+  }
+  
+  .description-text {
+    font-size: 20px;
+  }
+  
+  /* Преимущества */
+  .advantages {
+    padding: 100px 20px;
+  }
+  
+  /* Навыки */
+  .skills {
+    padding: 10vh 20px 30vh;
+  }
+  
+  /* Галерея: меняем сетку на одну колонку */
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 15px;
+  }
+  
+  .large-photo {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  
+  /* Услуги - вертикальное расположение */
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service-image,
+  .service-details {
+    flex: 1 0 100%;
+  }
+  
+  .service-details {
+    padding: 20px 0;
+  }
+  
+  /* Контакты */
+  .contact {
+    padding: 100px 20px;
+    font-size: 28px;
+  }
+} 
+  

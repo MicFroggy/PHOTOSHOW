@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #d5dae0;
+  /* Вложенные элементы */
+}
+body h1, body h2, body h3 {
+  font-family: "Helvetica Neue", sans-serif;
+}
+body p {
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=phow.css.map */

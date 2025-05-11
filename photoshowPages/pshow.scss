@@ -1,0 +1,20 @@
+// Объявляем переменные для удобства
+$font-family: Arial, sans-serif;
+$text-color: #333;
+$background-color: #d5dae0;
+
+body {
+  font-family: $font-family;
+  line-height: 1.5;
+  color: $text-color;
+  background-color: $background-color;
+
+  /* Вложенные элементы */
+  h1, h2, h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

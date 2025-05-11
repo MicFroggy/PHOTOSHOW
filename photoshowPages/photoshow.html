@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHOTOSHOW</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="photoshow.css">
+  <link rel="stylesheet" href="pshow.css">
+</head>
+<body>
+
+  <object data="logo.xml" type="image/svg+xml" class="logo-svg"></object>
+
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#main">Главная</a></li>
+        <li class="dropdown">
+          <a href="#">Услуги</a>
+          <div class="dropdown-content">
+            <a href="#pht">Photoshop</a>
+            <a href="#wd">UI/UX дизайн</a>
+            <a href="#doweb">Разработка веб-сайтов</a>
+          </div>
+        </li>
+        <li><a href="#works">Работы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Первый блок -->
+  <section class="main" id="main">
+    <div class="main-overlay"></div>
+    <div class="main-content">
+      <h1>UI/UX-дизайн и веб-разработка</h1>
+      <p>Я - UI/UX дизайнер и разработчик, специализирующийся на создании качественного и уникального дизайна, разработке веб-сайтов, мобильных приложений и плагинов. С вниманием к деталям и мелочам, я помогаю компаниям и брендам создавать привлекательные и интуитивно понятные интерфейсы. Учет трендов и стремление к улучшению являются основными приоритетами.</p>
+    </div>
+  </section>
+  
+  <!-- Описание -->
+  <section class="description-section">
+    <h2 class="description-title hidden">Описание</h2>
+    <p class="description-text hidden">
+      Помогаю заказчикам: стартапам и малому бизнесу качественно выделяться на фоне конкурентов при помощи эффективного, качественного и простого дизайна
+    </p>
+    <a href="#skills" class="b1 hidden" target="_blank">Навыки</a>
+  </section>
+  
+  <!-- Преимущества -->
+  <section class="advantages">
+    <h2 class="advh2 hidden">Преимущества</h2>
+    <p class="adv hidden">
+      Комплекс задач включает рекламный дизайн, брендинг, UI/UX-дизайн, разработку веб-сайтов, мобильных приложений и плагинов. Мы сотрудничаем с компаниями в сферах IT, дизайна и образования, предлагая полный спектр услуг для управления и продвижения ваших идей.
+    </p>
+    <div class="advantage-container">
+      <div class="advantage-item hidden">
+        <img src="star.png" alt="Иконка качества">
+        <h3 class="ah3">Качество</h3>
+        <p class="ap">Гарантия качества выполненных заказов</p>
+      </div>
+      <div class="advantage-item hidden">
+        <img src="gadget.png" alt="Иконка поддержки">
+        <h3 class="ah3">Поддержка</h3>
+        <p class="ap">Вы всегда можете обратиться за помощью</p>
+      </div>
+      <div class="advantage-item hidden">
+        <img src="lightning.png" alt="Иконка цены">
+        <h3 class="ah3">Цена</h3>
+        <p class="ap">Невысокая цена за услугу</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Навыки -->
+  <section class="skills" id="skills">
+    <div class="dd12">
+      <h2 class="sh2">Навыки</h2>
+      <div class="skill hidden">
+        <span class="skill-name">Figma</span>
+        <div class="skill-bar" style="width: 95%;"></div>
+      </div>
+      <div class="skill hidden">
+        <span class="skill-name">Photoshop</span>
+        <div class="skill-bar" style="width: 75%;"></div>
+      </div>
+      <div class="skill hidden">
+        <span class="skill-name">Tilda</span>
+        <div class="skill-bar" style="width: 90%;"></div>
+      </div>
+      <div class="skill hidden">
+        <span class="skill-name">Illustrator</span>
+        <div class="skill-bar" style="width: 35%;"></div>
+      </div>
+      <div class="skill hidden">
+        <span class="skill-name">HTML / CSS / JavaScript</span>
+        <div class="skill-bar" style="width: 60%;"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Работы / Галерея -->
+  <section class="works" id="works">
+    <h2 class="wh2 hidden">Работы</h2>
+    <div class="gallery hidden">
+      <img src="marketingagency1.jpg" alt="Работа 1" class="large-photo hidden">
+      <img src="Petshop1.jpg" alt="Работа 2" class="vertical-photo hidden">
+      <img src="superclean1.jpg" alt="Работа 3" class="vertical-photo hidden">
+      <img src="Main1.jpg" alt="Работа 4" class="small-photo hidden">
+      <img src="CoursesApp1.jpg" alt="Работа 6" class="smallest-photo hidden">
+    </div>
+    <div class="but1">
+      <a href="portfolio.html" class="b1" target="_blank">Портфолио</a>
+    </div>
+  </section>
+  
+  <!-- Услуги -->
+  <section class="services" id="services">
+    <div class="container">
+      <h1 class="ush1 hidden">Услуги</h1>
+      <p class="pu hidden">
+        Услуги UI/UX-дизайна и разработки направлены на создание качественных и эффективных решений для клиентов. Специализация на разработке дизайна логотипов, фирменного стиля, рекламных материалов, а также на создании уникальных веб-сайтов, мобильных приложений и плагинов.
+      </p>
+      
+      <div class="service-item hidden">
+        <div class="service-image">
+          <img src="ph.jpg" alt="Photoshop Service" id="pht">
+        </div>
+        <div class="service-details">
+          <h2>Работа с изображениями в Photoshop</h2>
+          <p class="t1">
+            В услугу работы с изображениями в Photoshop входит качественное редактирование и улучшение фотографий. Коррекция цветовой гаммы, удаление дефектов, создание уникальных графических элементов, добавление текстур и эффектов.
+        </p>
+        <ul class="t1">
+            <li>Удаление/добавление объекта</li>
+            <li>Ретушь (портретная/предметная)</li>
+            <li>Создание инфографики и маркетинговых материалов</li>
+            <li>Улучшение и чистка фото</li>
+            <li>Изменение цвета и текстуры элементов</li>
+        </ul>
+          <a href="portfolio.html" class="b1" target="_blank">Порфолио</a>
+        </div>
+      </div>
+      
+      <div class="service-item hidden">
+        <div class="service-image">
+          <img src="wd.jpg" alt="UI/UX-дизайн" id="wd">
+        </div>
+        <div class="service-details">
+          <h2>UI/UX-дизайн</h2>
+          <p class="t1">
+            Создание дизайна современных, интуитивно понятных и продающих сайтов или лендингов в Figma/Photoshop. Разработка уникального интерфейса с учетом целей и потребностей клиента.
+        </p>
+        <p class="t1"><b>Комплекс работ:</b></p>
+        <ul class="t1">
+            <li>Маркетинговый дизайн и структура</li>
+            <li>Дизайн лендингов, интернет-магазинов, корпоративных сайтов и блогов</li>
+            <li>Подбор и утверждение количества блоков вместе с клиентом</li>
+        </ul>
+          <a href="portfolio.html" class="b1" target="_blank">Порфолио</a>
+        </div>
+      </div>
+      
+      <div class="service-item hidden">
+        <div class="service-image">
+          <img src="doweb.jpg" alt="Разработка веб-сайтов" id="doweb">
+        </div>
+        <div class="service-details">
+          <h2>Разработка веб-сайтов</h2>
+          <p class="t1">
+            Создание уникальных, современных и продающих веб-сайтов и лендингов, которые прекрасно представляют ваш бренд и эффективно привлекают внимание вашей целевой аудитории.
+        </p>
+        <p class="t1"><b>Примеры:</b></p>
+        <ul class="t1">
+            <li>Маркетинговый дизайн и структура</li>
+            <li>Количество блоков и страниц обговаривается с клиентом</li>
+            <li>В работе используются HTML, CSS, JavaScript</li>
+            <li>Создание веб-сайта ведётся с нуля либо по вашему дизайну (если такой имеется)</li>
+        </ul>
+          <a href="portfolio.html" class="b1" target="_blank">Порфолио</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Контакты -->
+  <footer class="section contact hidden" id="contact">
+        <h2 class="foot hidden">Связаться</h2>
+      <p class="end hidden">Уважаемый клиент!<br>
+        Вы можете задать вопросы написав на
+        E-mail, в сообщество Вконтакте, в Instagram или Telegram.</p>
+      <div class="contacts hidden">
+        <h2 class="eh1 hidden">Контакты</h2>
+        <p class="end">E-mail: photoshow836@gmail.com</p>
+        <p class= "foottt">© 2025 PHOTOSHOW. Все права защищены.</p>
+        </div>
+  </footer>
+  
+  <script src="photoshow.js"></script>
+</body>
+</html>
