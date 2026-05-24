@@ -140,7 +140,7 @@
   position: absolute;
   width: 350px;
   height: 350px;
-  background: url('rocket.png') no-repeat center/contain;
+  background: url('./rocket.png') no-repeat center/contain;
   opacity: 0.1;
 }
 
